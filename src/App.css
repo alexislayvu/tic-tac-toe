@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 20px;
+  background-color: #e9ecef;
+}
+
+.square {
+  float: left;
+  border: none;
+  border-radius: 10px;
+  margin: 4px;
+  width: 75px;
+  height: 75px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+  cursor: pointer;
+  font-size: 36px;
+  line-height: 34px;
+  transition: transform 0.2s ease;
+}
+
+.square:active {
+  transform: scale(0.9);
+}
+
+.board-row:after {
+  content: '';
+  clear: both;
+  display: table;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  border-radius: 6px;
+  width: 500px;
+  height: 50px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  color: #6c757d;
+  font-size: 24px;
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.game-info {
+  margin-left: -220px;
+  height: 240px;
+  overflow-y: scroll;
+  margin-top: 85px;
+  padding-right: 20px;
+  border-top: 1px solid #bfc0c0;
+  border-bottom: 1px solid #bfc0c0;
+}
+
+.moves-list {
+  margin: 0;
+  color: #6c757d;
+}
+
+.game-info::-webkit-scrollbar {
+  width: 6px;
+}
+
+.game-info::-webkit-scrollbar-thumb {
+  background: #bfc0c0;
+  border-radius: 4px;
+}
+
+.moves-btn {
+  border: none;
+  border-radius: 6px;
+  height: 30px;
+  width: 150px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  color: #6c757d;
+  margin: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.moves-btn:active {
+  transform: scale(0.9);
+}
+
+.current-move {
+  border: 1px solid #bfc0c0;
+  font-weight: bold;
+}
+
+.restart-btn {
+  position: absolute;
+  top: 425px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  border-radius: 6px;
+  height: 30px;
+  width: 150px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  color: #6c757d;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.restart-btn:active {
+  transform: translate(-50%, -50%) scale(0.9);
+}
+
+@media screen and (max-width: 576px) {
+  .status {
+    width: 450px;
+  }
+
+  .board-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .game-info {
+    transform: translate(-50%, 110%);
+  }
+
+  .restart-btn {
+    top: 640px;
+    left: 51.7%;
+  }
+}
