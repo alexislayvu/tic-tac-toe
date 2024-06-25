@@ -1,4 +1,4 @@
-# Grid Clash
+# Tic Tac Toe
 
 A tic-tac-toe application built with HTML, CSS, JavaScript, and React.
 
